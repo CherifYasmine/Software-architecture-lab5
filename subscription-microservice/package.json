@@ -23,8 +23,11 @@
   "dependencies": {
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/microservices": "^8.4.5",
+    "@nestjs/mongoose": "^9.1.0",
     "@nestjs/platform-express": "^8.0.0",
+    "mongoose": "^6.3.4",
     "redis": "^4.1.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
