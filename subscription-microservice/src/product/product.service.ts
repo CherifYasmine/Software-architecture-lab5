@@ -17,7 +17,6 @@ export class ProductService {
     this.redisClient.emit('add-new-product',createProductDto)
     return await newProduct.save();
   }
-
   async findAll(): Promise<Product[]> {
     return await this.productModel.find();
   }

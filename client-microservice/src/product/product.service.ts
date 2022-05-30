@@ -9,7 +9,7 @@ import { Product } from './entity/product.entity';
 export class ProductService {
     constructor(
         @InjectRepository(Product) private readonly productRepository: Repository<Product>,
-        @Inject('GREETING_SERVICE') private productProxy: ClientProxy
+        @Inject('REDISCLIENT') private productProxy: ClientProxy
     ) {}
 
     async passerCommande(dto: ProductDto) {

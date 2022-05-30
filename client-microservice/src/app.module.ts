@@ -24,7 +24,7 @@ import { ClientProxy, ClientsModule, Transport } from '@nestjs/microservices';
     }),TypeOrmModule.forFeature([UserEntity, Product]),
     UserModule, ProductModule,
     ClientsModule.register([
-      {name: 'GREETING_SERVICE',
+      {name: 'REDISCLIENT',
       transport: Transport.REDIS,
       options : {
         url: 'redis://localhost:6379',

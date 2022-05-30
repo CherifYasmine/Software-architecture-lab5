@@ -2,25 +2,23 @@ import { Module } from '@nestjs/common';
 import { ProductService } from './product.service';
 import { ProductController } from './product.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ProductSchema } from './product.schema';
+import { Product, ProductSchema } from '../schemas/product.schema';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: 'product', schema: ProductSchema }]),
+    MongooseModule.forFeature([{ name: Product.name, schema: ProductSchema }]),
     ClientsModule.register([
       {
         name: 'REDISCLIENT',
         transport: Transport.REDIS,
-        options : {
-
+        options: {
           url: 'redis://localhost:6379',
-  
-        }
+        },
       },
     ]),
   ],
   controllers: [ProductController],
-  providers: [ProductService]
+  providers: [ProductService],
 })
 export class ProductModule {}

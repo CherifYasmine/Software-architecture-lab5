@@ -9,7 +9,7 @@ import { UserEntity } from './entity/user.entity';
 export class UserService {
     constructor(
         @InjectRepository(UserEntity) private readonly userRepository: Repository<UserEntity>,
-        @Inject('GREETING_SERVICE') private client: ClientProxy
+        @Inject('REDISCLIENT') private client: ClientProxy
     ) {}
 
     async addUser(dto: UserDto) {
@@ -17,13 +17,13 @@ export class UserService {
             name: dto.name,
             email: dto.email
         });
-        this.client.send('user-add', {name: 'A user has been added.'});
+        this.client.send('add-new-user', {name: 'A user has been added.'});
         return user;
     }
 
     async deleteUser(id: number) { 
         const user = this.userRepository.delete({id: id});
-        this.client.send('user-delete', {name: 'A user has been deleted.'});
+        this.client.send('delete-user', {name: 'A user has been deleted.'});
         return user;
     }
 }

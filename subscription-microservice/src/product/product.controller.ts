@@ -14,7 +14,11 @@ export class ProductController {
     return this.productService.create(product);
   }
 
-  @MessagePattern({ cmd: 'products' }, Transport.TCP)
+  @MessagePattern({cmd: 'greeting'})
+  getGreetingMessage(name: string): string {
+    return `Hello ${name}`;
+  }
+  @MessagePattern({ cmd: 'products' })
   findAll(): Promise<Product[]> {
     console.log(this.productService.findAll())
     return this.productService.findAll();
