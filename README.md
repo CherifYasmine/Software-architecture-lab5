@@ -17,7 +17,7 @@ The mean goal of this project is to build a backend solution of an online shoppi
 <img width="200" height="100" src="https://user-images.githubusercontent.com/62222721/171054997-52494451-b22e-462a-a646-e2dbe227b4a7.png">
 
 ## Architecture
-![Copy of architecture-design (2)](https://user-images.githubusercontent.com/62222721/171058217-27c89e9a-3b2c-4026-a257-0fd9882f46f7.png)
+![Copy of architecture-design (3)](https://user-images.githubusercontent.com/62222721/171058801-7a74e4ed-9a61-4d4d-867b-29ba9da3a07c.png)
 
 **Client**
 - The Client can add or delete from the user table and then it will send a notification to the Subscription microservice.
