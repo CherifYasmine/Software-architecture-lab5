@@ -1,5 +1,13 @@
 # Hybrid software architecture
 
+## Contributors
+  - [Yasmine Cherif](https://github.com/CherifYasmine)
+  - [Fatma Guidara](https://github.com/FatmaGuidara)
+  - [Rami Kammoun](https://github.com/ramiKammoun)
+  - [Oumaima Kboubi](https://github.com/oumaima-kboubi)
+  - [Chaima Ben Ghanem](https://github.com/chaimabg)
+  - [Amal Abidi](https://github.com/amalabidi)
+ 
 ## Idea
 The mean goal of this project is to build a backend solution of an online shopping web application that revolves around the following main usecases:
 
